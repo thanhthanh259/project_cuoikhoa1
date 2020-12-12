@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:project_cuoikhoa/datasorce.dart';
 import 'package:project_cuoikhoa/giao_dien/countyPage.dart';
-import 'package:project_cuoikhoa/giao_dien/infoPanel.dart';
 import 'package:project_cuoikhoa/giao_dien/mosteffectedcountries.dart';
 import 'package:project_cuoikhoa/giao_dien/worldwide_panel.dart';
 
@@ -56,7 +55,7 @@ class _HomePageState extends State<HomePage> {
 
         centerTitle: false,
         title: Text(
-          'COVID-19 TRACKER',
+          'THÔNG TIN COVID_19',
         ),
       ),
       body: RefreshIndicator(
@@ -84,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
-                        'Worldwide',
+                        'THẾ GIỚI',
                         style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                       ),
                       GestureDetector(
@@ -98,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                                 borderRadius: BorderRadius.circular(15)),
                             padding: EdgeInsets.all(10),
                             child: Text(
-                              'Regional',
+                              'QUỐC GIA',
                               style: TextStyle(
                                   fontSize: 16,
                                   color: Colors.white,
@@ -117,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
                   child: Text(
-                    'Most affected Countries',
+                    'Các Quốc Gia Bị Ảnh Hưởng Nhiều Nhất',
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -129,13 +128,13 @@ class _HomePageState extends State<HomePage> {
                     : MostAffectedPanel(
                   countryData: countryData,
                 ),
-                InfoPanel(),
+
                 SizedBox(
                   height: 20,
                 ),
                 Center(
                     child: Text(
-                      'WE ARE TOGETHER IN THE FIGHT',
+                      'CHÚNG TA CÙNG NHAU CHIẾN ĐẤU',
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     )),
                 SizedBox(
